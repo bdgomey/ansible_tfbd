@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+
+regions:
+- us-east-1
+
+include_filters:
+- tag:aws:cloudformation:stack-name:
+    - 'ansible'
+
+groups:
+  Node01: "'ansible-Node01' in tags.Name"
+  Node02: "'ansible-Node02' in tags.Name"
+  Controlplane: "'ansible-Controlplane' in tags.Name"
