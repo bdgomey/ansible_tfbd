@@ -1,0 +1,15 @@
+- name: learning ansible
+  hosts: Node01,Node02
+  vars_files:
+    - "vars.yaml"
+  
+
+  roles:
+    - webserver
+
+  tasks:
+  - name: print my secret
+    debug:
+      msg: "{{ supersecret }}"
+ 
+  

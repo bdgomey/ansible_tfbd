@@ -1,0 +1,5 @@
+---
+# vars file for webserver
+webserver: apache2
+directory: /var/www/html/index.html
+path: /var/www/html
